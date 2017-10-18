@@ -1,0 +1,282 @@
+  @import "reset";
+  @import "myfn";
+  body {
+      background-color: #000000;
+      margin: 0;
+      cursor: move;
+      overflow: hidden;
+  }
+
+  .bg_section {
+      width: 1026px;
+      height: 1026px;
+      background-size: cover;
+      position: absolute;
+  }
+
+  .bg_section .bg {
+      position: absolute;
+      width: 1026px;
+      height: 1026px;
+  }
+
+  .btn1 {
+      position: absolute;
+      width: 174px;
+      height: 206px;
+      top: 40%;
+      left: 40%;
+      -webkit-transform: perspective(600px);
+      background: url(../img/btn1.png);
+      background-size: 100% 100%;
+  }
+
+  .btn2 {
+      position: absolute;
+      width: 192px;
+      height: 260px;
+      top: 30%;
+      left: 60%;
+      -webkit-transform: perspective(600px);
+      background: url(../img/btn2.png);
+      background-size: 100% 100%;
+  }
+
+  .btn3 {
+      position: absolute;
+      width: 150px;
+      height: 263px;
+      top: 40%;
+      left: 35%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn3.png);
+      background-size: 100% 100%;
+  }
+
+  .btn4 {
+      position: absolute;
+      width: 180px;
+      height: 287px;
+      top: 20%;
+      left: 10%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn4.png);
+      background-size: 100% 100%;
+  }
+
+  .btn5 {
+      position: absolute;
+      width: 180px;
+      height: 221px;
+      top: 60%;
+      left: 10%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn5.png);
+      background-size: 100% 100%;
+  }
+
+  .btn6 {
+      position: absolute;
+      width: 223px;
+      height: 210px;
+      top: 60%;
+      left: 35%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn6.png);
+      background-size: 100% 100%;
+  }
+
+  .btn7 {
+      position: absolute;
+      width: 180px;
+      height: 332px;
+      top: 60%;
+      left: 65%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn7.png);
+      background-size: 100% 100%;
+  }
+
+  .btn8 {
+      position: absolute;
+      width: 200px;
+      height: 225px;
+      top: 60%;
+      left: 40%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn8.png);
+      background-size: 100% 100%;
+  }
+
+  .btn9 {
+      position: absolute;
+      width: 200px;
+      height: 244px;
+      top: 40%;
+      left: 60%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn9.png);
+      background-size: 100% 100%;
+  }
+
+  .btn10 {
+      position: absolute;
+      width: 150px;
+      height: 248px;
+      top: 60%;
+      left: 70%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn10.png);
+      background-size: 100% 100%;
+  }
+
+
+
+  .btn12 {
+      position: absolute;
+      width: 80px;
+      height: 101px;
+      top: 67%;
+      left: 10%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn12.png);
+      background-size: 100% 100%;
+  }
+
+  .btn11 {
+      position: absolute;
+      width: 120px;
+      height: 152px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn11.png);
+      background-size: 100% 100%;
+  }
+
+  .btn13 {
+      position: absolute;
+      width: 120px;
+      height: 151px;
+      top: 60%;
+      left: 70%;
+      -webkit-transform: perspective(800px);
+      background: url(../img/btn13.png);
+      background-size: 100% 100%;
+  }
+
+  .controlBtn {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      z-index: 99999;
+      left: 8%;
+      top: 10%;
+  }
+
+  .index2Titlebg {
+      position: absolute;
+      width: rem(750);
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.5);
+      height: rem(150);
+  }
+
+  #index2Title {
+      position: absolute;
+      top: 0;
+      color: #fff;
+      font-size: rem(25);
+      z-index: 9999;
+      width: 90%;
+      left: 50%;
+      margin-left: -45%;
+      top: 5%;
+      text-shadow: 1px 1px 0 #000;
+  }
+
+  .controlIcon {
+      background: url(../img/controlIcon.png);
+      background-size: 100% 100%;
+  }
+
+  .controlIconae {
+      background: url(../img/controlIconae.png);
+      background-size: 100% 100%;
+  }
+
+  @-webkit-keyframes bounceant1 {
+      0% {
+          -webkit-transform: translateY(0)
+      }
+      50% {
+          -webkit-transform: translateY(-12px)
+      }
+      100% {
+          -webkit-transform: translateY(0px)
+      }
+  }
+
+  @keyframes bounceant1 {
+      0% {
+          transform: translateY(0)
+      }
+      50% {
+          transform: translateY(-12px)
+      }
+      100% {
+          transform: translateY(0px)
+      }
+  }
+
+  .bounceant1 {
+      -webkit-animation: bounceant1 3s infinite;
+      animation: bounceant1 3s infinite
+  }
+
+  .layout {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 99999;
+  }
+
+  .tips {
+      @include whbg2(718, 124, 'tips.png');
+      margin: rem(400) auto 0;
+  }
+
+  .tips2 {
+      @include whbg2(403, 165, 'tips2.png');
+      position: absolute;
+      right: rem(20);
+      top: rem(20);
+  }
+
+  .sharebg {
+      @include whbg2(619, 341, 'sharebg.png');
+      margin: rem(200) auto 0;
+      position: relative;
+      p {
+          color: #691111;
+          font-size: rem(32);
+          text-align: center;
+          padding-top: rem(120);
+      }
+  }
+
+  a.share {
+      @include whbg2(170, 52, 'sharebtn.jpg');
+      margin: rem(80) auto 0;
+      display: block;
+  }
+
+  a.close {
+      @include whbg2(30, 31, 'close.png');
+      position: absolute;
+      top: rem(20);
+      right: rem(20);
+  }

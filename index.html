@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="cmge_xindy" />
+    <!--2017-7-24 13:54:09-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>那年你几岁？</title>
+    <script src="//download.shengli.com/web/setRem-750-100.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="container" class="wrapper">
+        <ul id="scene" class="scene unselectable" data-limit-x="200" data-limit-y="0" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="0">
+            <li class="layer" data-depth="0.5">
+                <div class="bg"></div>
+            </li>
+            <li class="layer" data-depth="0.15">
+                <div class="lxy"></div>
+            </li>
+            <li class="layer" data-depth="0.25">
+                <div class="zwj"></div>
+            </li>
+            <li class="layer" data-depth="0.00">
+                <div class="slogan"></div>
+            </li>
+            <li class="layer" data-depth="0.00">
+                <a href="index2.html" class="downloadbtn2 download downBtn"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="layoutbg none">
+        <div class="layout tips2"></div>
+    </div>
+    <script src="//download.shengli.com/jquery/jquery-2.2.3.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script>
+    $(function() {
+        $('#scene').parallax();
+        resize();
+
+        function resize() {
+            $('#scene')[0].style.width = window.innerWidth + 'px';
+            $('#scene')[0].style.height = window.innerHeight + 'px';
+        }
+        window.addEventListener('orientationchange', function(event) {
+            if (window.orientation == 180 || window.orientation == 0) {
+                $(".layoutbg").hide();
+            }
+            if (window.orientation == 90 || window.orientation == -90) {
+                $(".layoutbg").show();
+            }
+        });
+    })
+    </script>
+</body>
+
+</html>

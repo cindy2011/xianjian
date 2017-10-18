@@ -1,0 +1,89 @@
+$img-src: "../images/";
+@function rem($n) {
+    @return $n/100*1rem;
+}
+
+@mixin wandh($w, $h) {
+    width: rem($w);
+    height: rem($h);
+}
+
+@mixin bg($bg) {
+    background:url(#{$img-src}#{$bg}) center 0 no-repeat;
+    background-size: 100% auto;
+}
+
+@mixin whbg($w, $h, $bg) {
+    width: rem($w);
+    height: rem($h);
+    background:url(#{$img-src}#{$bg}) center 0 no-repeat;
+    background-size: 100% auto;
+}
+@mixin whbg2($w, $h, $bg) {
+    width: rem($w);
+    height: rem($h);
+    background:url(../img/#{$bg}) center 0 no-repeat;
+    background-size: 100% auto;
+}
+@mixin font_c($px, $hight, $color) {
+    font-size: rem($px);
+    height: rem($hight);
+    line-height: rem($hight);
+    text-align: center;
+    color: $color;
+}
+
+@mixin font_l($px, $hight, $color) {
+    font-size: rem($px);
+    height: rem($hight);
+    line-height: rem($hight);
+    color: $color;
+}
+
+@mixin elli($num) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    line-clamp: $num;
+    box-orient: vertical;
+}
+
+@mixin pos($t, $l) {
+    position: absolute;
+    top: rem($t);
+    left: rem($l);
+}
+
+%posAuto {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/**layout**/
+
+.layoutbg {
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.layout {
+    @extend %posAuto;
+}
+
+a.close {
+    @include wandh(58, 58);
+    display: block;
+}

@@ -1,0 +1,97 @@
+<krpano version="1.19" title="Corfu Holiday Trip">
+    <!-- <include url="skin/vtourskin.xml"/> -->
+    <!--
+ customize skin settings: maps, gyro, thumbnails, tooltips, layout, design, ...
+-->
+    <skin_settings
+        maps="false"
+        maps_type="google"
+        maps_bing_api_key="An4-9WoANqtASVorNezSjENest2VC0zoAzvMhEpdTjb3uY-k6u6bMkPxYpDsolsF"
+        maps_zoombuttons="false"
+        gyro="true"
+        littleplanetintro="false"
+        title="true"
+        thumbs="true"
+        thumbs_width="120"
+        thumbs_height="80"
+        thumbs_padding="10"
+        thumbs_crop=""
+        thumbs_opened="false"
+        thumbs_text="false"
+        thumbs_dragging="true"
+        thumbs_onhoverscrolling="false"
+        thumbs_scrollbuttons="false"
+        thumbs_scrollindicator="false"
+        thumbs_loop="false"
+        tooltips_buttons="false"
+        tooltips_thumbs="false"
+        tooltips_hotspots="false"
+        tooltips_mapspots="false"
+        deeplinking="false"
+        loadscene_flags="MERGE"
+        loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+        loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+        loadscene_blend_next="SLIDEBLEND(0.5, 0, 0.75, linear)"
+        loadingtext="loading..."
+        layout_width="100%"
+        layout_maxwidth.normal="900"
+        layout_maxwidth.mobile=""
+        controlbar_width.normal="-44"
+        controlbar_width.mobile="100%"
+        controlbar_height.normal="38"
+        controlbar_height.mobile="34"
+        controlbar_offset.normal="22"
+        controlbar_offset.mobile="0"
+        controlbar_offset_closed="-40"
+        controlbar_overlap.normal="7"
+        controlbar_overlap.mobile="2"
+        design_skin_images="vtourskin.png"
+        design_bgcolor="0x000000"
+        design_bgalpha="0.5"
+        design_bgborder="0 0xFFFFFF 1.0"
+        design_bgroundedge.normal="9"
+        design_bgroundedge.mobile="1"
+        design_bgshadow="0 0 9 0xFFFFFF 0.5"
+        design_thumbborder_bgborder="4 0xFFFFFF 1.0"
+        design_thumbborder_padding="2"
+        design_thumbborder_bgroundedge="5"
+        design_text_css="color:#FFFFFF; font-family:Arial; font-weight:bold;"
+        design_text_shadow="1"/>
+    <!--
+
+	    For an alternative skin design either change the <skin_settings> values
+	    from above or optionally include one of the predefined designs from below.
+	    Either by removing the 'xml-if-check' from the particular <include> element
+	    or by adding e.g. initvar:{design:'flat_light'} to the embedpano() call in
+	    the html file:
+
+-->
+    <!--
+ startup action - here the first pano/scene will be loaded
+-->
+    <action name="startup" autorun="onstart">
+        if(startscene === null, copy(startscene,scene[0].name)); loadscene(get(startscene), null, MERGE);
+    </action>
+    <scene name="scene_achilleion-hof-unten" title="Achilleion - Garden" onstart="" thumburl="panos/achilleion-hof-unten.tiles/thumb.jpg" lat="39.56330333" lng="19.90445833" heading="0.0">
+        <view hlookat="-1" vlookat="11" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto"/>
+        <preview url="http://tx.163.com/m/2016/h5/haibao/360/images/f.jpg"/>
+        <image type="CUBE">
+            <cube url="http://tx.163.com/m/2016/h5/haibao/360/images/%s.jpg"/>
+            <plugin name="skin_gyro" keep="true" url="" html5_url="plugins/gyro2.js" devices="html5" enabled="true"/>
+        </image>
+        <!--  place your scene hotspots here  -->
+    </scene>
+<plugin name="gyro" devices="html5" keep="true"
+        url="plugins/gyro2.js"
+        enabled="true"
+        camroll="true"
+        friction="0.0"
+        touch_mode="full"
+        sensor_mode="1"
+        autocalibration="false"
+        onavailable=""
+        onunavailable=""
+        onenable=""
+        ondisable=""
+        />
+</krpano>
